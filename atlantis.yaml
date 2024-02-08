@@ -20,7 +20,7 @@ workflows:
   myworkflow:
     plan:
       steps:
-        - run: bin/test.sh
+        - run: ../../bin/test.sh
         - init
         - plan
         - run: ../../bin/finalize.sh
