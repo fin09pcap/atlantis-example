@@ -10,5 +10,6 @@ steps:
               - image: hashicorp/terraform:1.7.3
                 name: terraform-plan
                 command:
+                  - .
                   - .buildkite/scripts/plan.sh
                   - workspaces/staging
