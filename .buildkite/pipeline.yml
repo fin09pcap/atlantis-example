@@ -9,6 +9,6 @@ steps:
             containers:
               - image: hashicorp/terraform:1.7.3
                 name: terraform-plan
-                command:ter
+                command:
                   - .buildkite/scripts/plan.sh
                   - workspaces/staging
