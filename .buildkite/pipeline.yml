@@ -2,10 +2,10 @@ agents:
   queue: kubernetes
 
 steps:
-  - label: "Test pipeline :congratulations: :champagne:"
+  - label: "Test Terraformt pipeline :congratulations: :terraform:"
     plugins:
       - kubernetes:
           podSpec:
             containers:
-              - image: alpine:latest
-                command: [uname]
+              - image: hashicorp/terraform:1.7.3
+                command: [version]
