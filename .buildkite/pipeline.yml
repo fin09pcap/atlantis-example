@@ -8,4 +8,4 @@ steps:
           podSpec:
             containers:
               - image: hashicorp/terraform:1.7.3
-                command: [version]
+                command: terraform version
