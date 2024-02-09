@@ -2,16 +2,12 @@ agents:
   queue: kubernetes
 
 steps:
-  - label: "Test Terraformt pipeline :congratulations: :terraform:"
+  - label: "Test Terraform pipeline :congratulations: :terraform:"
     plugins:
       - kubernetes:
           podSpec:
             containers:
               - image: hashicorp/terraform:1.7.3
-                name: terraformte-init
-                command: [terraform]
-                args: ["init", "-get=true", "workspaces/staging"]
-              - image: hashicorp/terraform:1.7.3
                 name: terraform-plan
-                command: [terraform]
-                args: ["plan", "-dete tailed-exitcode", "workspaces/staging"]
+                command: ["buildkite/scripts/plan.sh"]
+                args: ["workspaces/staging"]
