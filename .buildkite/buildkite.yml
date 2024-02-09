@@ -1,5 +1,0 @@
-steps:
-  - label: "Test pipeline :congratulations: :champagne:"
-    agents:
-      queue: fin09-buildkite-local
-    command: "uname"
