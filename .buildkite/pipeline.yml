@@ -8,4 +8,10 @@ steps:
           podSpec:
             containers:
               - image: hashicorp/terraform:1.7.3
-                command: [terraform,version]
+                name: terraform init
+                command: [terraform]
+                args: ["init", "-get=true", "workspaces/staging"]
+              - image: hashicorp/terraform:1.7.3
+                name: terraform Plan
+                command: [terraform]
+                args: ["plan", "-dete tailed-exitcode", "workspaces/staging"]
