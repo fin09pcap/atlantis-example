@@ -1,7 +1,8 @@
+agents:
+  queue: kubernetes
+
 steps:
   - label: "Test pipeline :congratulations: :champagne:"
-    agents:
-      queue: kubernetes
     plugins:
       - kubernetes:
           podSpec:
