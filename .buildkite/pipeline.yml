@@ -1,5 +1,5 @@
 steps:
   - label: "Test pipeline :congratulations: :champagne:"
     agents:
-      queue: fin09-buildkite-local
+      queue: kubernetes
     command: "uname"
