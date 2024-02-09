@@ -2,4 +2,9 @@ steps:
   - label: "Test pipeline :congratulations: :champagne:"
     agents:
       queue: kubernetes
-    command: "uname"
+    plugins:
+      - kubernetes:
+          podSpec:
+            containers:
+              - image: alpine:latest
+                command: [uname]
