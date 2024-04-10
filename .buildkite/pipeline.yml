@@ -1,11 +1,4 @@
-agents:
-  queue: kubernetes
-
 steps:
   - label: "Test pipeline :congratulations: :champagne:"
-    plugins:
-      - kubernetes:
-          podSpec:
-            containers:
-              - image: alpine:latest
-                command: [uname]
+  - label: ":test_tube: uname"
+    command: "uname"
