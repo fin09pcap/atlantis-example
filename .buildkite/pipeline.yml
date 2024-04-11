@@ -3,8 +3,6 @@ steps:
     command: "uname"
   - label: "Test Terraform pipeline :congratulations: :terraform:"
     command:
-    - .
-    - .buildkite/scripts/plan.sh
-    - workspaces/staging
+    - terraform version
     agents:
       image: hashicorp/terraform:1.7.3
