@@ -1,6 +1,8 @@
 steps:
   - label: ":test_tube: Testing system output"
     command: "uname"
+  - label: ":test_tube: perform local testing here"
+    command: "sleep 300"
   - label: "Test Terraform pipeline Staging :congratulations: :terraform:"
     command:
       - .buildkite/scripts/plan.sh workspaces/staging
