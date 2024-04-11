@@ -1,5 +1,4 @@
 steps:
-  - label: "Test pipeline :congratulations: :champagne:"
   - label: ":test_tube: Testing system output"
     command: "uname"
   - label: "Test Terraform pipeline :congratulations: :terraform:"
