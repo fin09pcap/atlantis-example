@@ -2,7 +2,6 @@ steps:
   - label: ":test_tube: Testing system output"
     command: "uname"
   - label: "Test Terraform pipeline :congratulations: :terraform:"
-    command:
-    - terraform version
+    command: "terraform version"
     agents:
-      image: hashicorp/terraform:1.7.3
+      image: "hashicorp/terraform:1.7.3"
