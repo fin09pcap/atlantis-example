@@ -4,4 +4,4 @@ steps:
   - label: "Test Terraform pipeline :congratulations: :terraform:"
     command: "terraform version"
     agents:
-      image: "hashicorp/terraform:1.7.3"
+      image: "docker.elastic.co/ci-agent-images/infra-foundations/go-builder-buildkite-agent:0.0.1"
