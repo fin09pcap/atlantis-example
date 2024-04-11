@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -xo pipefail
+set -o pipefail
 
 TF_WORKSPACE=${1:-}
 
