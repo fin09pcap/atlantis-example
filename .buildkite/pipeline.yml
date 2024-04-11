@@ -1,4 +1,11 @@
 steps:
   - label: "Test pipeline :congratulations: :champagne:"
-  - label: ":test_tube: uname"
+  - label: ":test_tube: Testing system output"
     command: "uname"
+  - label: "Test Terraform pipeline :congratulations: :terraform:"
+    command:
+    - .
+    - .buildkite/scripts/plan.sh
+    - workspaces/staging
+    agents:
+      image: hashicorp/terraform:1.7.3
