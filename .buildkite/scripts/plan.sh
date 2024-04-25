@@ -1,8 +1,10 @@
 #!/bin/bash
 
-set -o pipefail
+set -ov pipefail
 
 TF_WORKSPACE=${1:-}
+
+env
 
 export VAULT_SECRET_ID="$(vault unwrap -field=secret_id $WRAPPED_SECRET_ID_TOKEN)"
 export VAULT_ROLE_ID="2389919d-d3df-348a-3a89-406cf0821287"
